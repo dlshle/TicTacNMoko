@@ -7,7 +7,7 @@
 # Wuziqi
 A simple Gokomu-like game based on js.
 
-<h1>#Why is it called Wuziqi?</h1>
+<h1>Why is it called Wuziqi?</h1>
 Wuziqi is the chinese pinyi of Gokomu.
 <h1>Difference between regular Gokomu?</h1>
 You can customize the game by changing the winning rules(change number of connected pieces) or the size of the board.
