@@ -4,12 +4,7 @@
 <li>Update the index.html</li>
 </ol>
 
-# Wuziqi
-A simple Gokomu-like game based on js.
-
-<h1>Why is it called Wuziqi?</h1>
-Wuziqi is the chinese pinyi of Gokomu.
-<h1>Difference between regular Gokomu?</h1>
-You can customize the game by changing the winning rules(change number of connected pieces) or the size of the board.
+# TicTacNMoko
+A customizable two player grid game which goal is constructing n connected pieces.
 <br>
-For instance, you can change the size of the board to 3 by 3 and the winning rule to 3 connected pieces to win. Then, you will have a tic-tac-toe game.
+For instance, by changing the size of the board to 3 by 3 and the winning rule to 3 connected pieces to win. Then, you will have a tic-tac-toe game. You can also change the board size to 9 by 9 and the winning rule to 5 connected pieces to win. Then, you will have a Gomoko game.(That's why the project is named TicTacNMoko)
