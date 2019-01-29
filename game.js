@@ -1,23 +1,20 @@
 var game;
 var canvas = document.createElement('canvas');
-var div = document.getElementById('wzq');
+var div; 
 canvas.width = 640;
 canvas.height = 640;
 canvas.addEventListener('click', function(event){
 	executeNext(event.offsetX,event.offsetY);
 },false);
-div.appendChild(canvas);
 ctx = canvas.getContext('2d');
 var pieceSize;
 var gameState = 0;
 
-function createNewWuziQi(){
-	createNewGame(19,5);
-}
-
-function createNewGame(diff, wc){
-	game = new gridGame(diff,diff,wc);
-	pieceSize = 640/diff;
+function createNewGame(node, size, wc){
+	div = node;
+	div.appendChild(canvas);
+	game = new gridGame(size,size,wc);
+	pieceSize = 640/size;
 	newGame();
 	gameState = 0;
 }
@@ -123,22 +120,23 @@ function gridGame(w,h,winCount){
 
 	this.newGame = function(){
 		this.win = 0;
+		this.grid = [];
 		for(var i=0;i<w;i++){
 			this.grid.push([]);
-		}
-		for(var i=0;i<w;i++){
-			for(var j=0;j<h;j++)
+			for(var j=0;j<h;j++){
 				this.grid[i].push(0);
+			}
 		}
 	}
 
-	this.newGame();
+	//this.newGame();
 	
 	this.turn = 1;	
 
 	this.place = function(x,y){
 		if(this.win!=0){
 			console.log("Player "+this.win+" has won the game. Please start a new round.");
+			alert("Player "+this.win+" has won the game. Please start a new round.");
 			return -1;
 		}
 		//validate location
@@ -159,6 +157,7 @@ function gridGame(w,h,winCount){
 			//winning
 			this.win = this.turn;
 			console.log("Player "+this.turn+" wins");
+			alert("Player "+this.turn+" wins");
 			return this.turn;
 		}
 		//take turn

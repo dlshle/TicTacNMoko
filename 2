@@ -6,8 +6,8 @@
 <body>
 	<script>
 		function startGame(){
-			let size = document.getElementById("size").value;
-			let n = document.getElementById("N").value;
+			let size = document.getElementById("size");
+			let n = document.getElementById("N");
 
 			if(isNumeric(n)&&isNumeric(size)){
 				createNewGame(document.getElementById("game"), size, n);	
